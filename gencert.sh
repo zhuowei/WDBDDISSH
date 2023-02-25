@@ -12,6 +12,6 @@ touch demoCA/index.txt
 "$OPENSSL" req -newkey rsa:1024 -keyout key.pem -out req.pem -sha256 -nodes \
 	-subj "/C=CA/ST=BC/O=Worth Doing Badly/CN=Worth Doing Badly DDI" \
 	-addext "basicConstraints=critical, CA:true"
-"$OPENSSL" ca -batch -selfsign -keyfile key.pem -in req.pem -out cert_raw.pem -startdate 070416225531Z -days 3650 \
+"$OPENSSL" ca -batch -selfsign -keyfile key.pem -in req.pem -out cert_raw.pem -startdate 070416225531Z -enddate 140416225531Z \
 	-config openssl.cnf
 "$OPENSSL" x509 -in cert_raw.pem -out cert.pem

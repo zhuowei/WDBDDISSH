@@ -18,7 +18,11 @@ I tried adding my own (developer signed) binaries and it didn't work; not sure i
 - `ideviceimagemounter DeveloperDiskImageModified.dmg DeveloperDiskImageModified.dmg.signature`
 - I couldn't figure out what to do with this, so I just made another debugserver LaunchDaemon that launches on port 24601
 - `iproxy 24601 24601`
-- lldb:
+- lldb can attach to processes:
+  - `process connect connect://localhost:24601`
+  - `attach <pid>`
+  - it'll take about a minute to pull the libraries from dyld cache, then it attaches
+- but lldb can't spawn processes:
   - `target create /bin/ps`
   - `process connect connect://localhost:24601`
   - `run`

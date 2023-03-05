@@ -1,7 +1,6 @@
 #!/bin/bash
 # run as root
 set -e
-rm DeveloperDiskImageModified.dmg || true
 hdiutil convert -format UDRW -o DeveloperDiskImageModified_16.1.dmg /Applications/Xcode_14.2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/16.1/DeveloperDiskImage.dmg
 hdiutil convert -format UDRW -o DeveloperDiskImageModified_16.0.dmg /Applications/Xcode_14.2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/16.0/DeveloperDiskImage.dmg
 hdiutil attach -owners on DeveloperDiskImageModified_16.1.dmg

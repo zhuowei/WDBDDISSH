@@ -9,9 +9,7 @@
     <string>Interactive</string>
     <key>ProcessType</key>
     <string>Interactive</string>
-
-    <key>Program</key>
-    <string>/Developer/usr/bin/debugserver</string>
+    
     <key>ProgramArguments</key>
     <array>
         <string>/Developer/usr/bin/debugserver</string>
@@ -19,7 +17,7 @@
         <string>0</string>
     </array>
 
-    <key>StandardOutputPath</key>
+    <key>StandardOutPath</key>
     <string>/dev/null</string>
     <key>StandardErrorPath</key>
     <string>/dev/null</string>

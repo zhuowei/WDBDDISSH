@@ -10,5 +10,12 @@ do
 	chown root:wheel /Volumes/DeveloperDiskImage/Library/LaunchDaemons/$i
 	chmod 644 /Volumes/DeveloperDiskImage/Library/LaunchDaemons/$i
 done
+for i in com.apple.ps.plist
+do
+        ln -s ../../../bin/ps /Volumes/DeveloperDiskImage/usr/bin/
+	cp $i /Volumes/DeveloperDiskImage/Library/LaunchDaemons/
+        chown root:wheel /Volumes/DeveloperDiskImage/Library/LaunchDaemons/$i
+        chmod 644 /Volumes/DeveloperDiskImage/Library/LaunchDaemons/$i
+done
 hdiutil detach /Volumes/DeveloperDiskImage
 bash signddi.sh

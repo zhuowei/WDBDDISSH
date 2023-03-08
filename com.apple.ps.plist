@@ -20,7 +20,7 @@
 	</dict>
 	<key>Sockets</key>
 	<dict>
-		<key>DebugServerSocket</key>
+		<key>psSocket</key>
 		<dict>
 			<key>SockServiceName</key>
 			<string>24602</string>

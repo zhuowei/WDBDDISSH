@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ps</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Developer/usr/bin/ps</string>
+		<string>-ax</string>
+	</array>
+	<key>StandardOutPath</key>
+	<string>/tmp/ps.log</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>inetdCompatibility</key>
+	<dict>
+		<key>Wait</key>
+		<false/>
+	</dict>
+	<key>Sockets</key>
+	<dict>
+		<key>psSocket</key>
+		<dict>
+			<key>SockServiceName</key>
+			<string>24602</string>
+		</dict>
+	</dict>
+	<key>KeepAlive</key>
+	<false/>
+</dict>
+</plist>
